@@ -11,7 +11,7 @@ npm install --save react-flux-modules
 ### ActionCreator
 
 ```ts
-import { createActionCreator } from '../src/react-flux-modules';
+import { createActionCreator } from 'react-flux-modules';
 
 const fooActionCreator = createActionCreator<string>()('@TEST/FOO');
 ```
@@ -19,7 +19,7 @@ const fooActionCreator = createActionCreator<string>()('@TEST/FOO');
 ### ReducerCreator
 
 ```ts
-import { createReducerCreator } from '../src/react-flux-modules';
+import { createReducerCreator } from 'react-flux-modules';
 
 const fooReducerCreator = createReducerCreator<{ foo: string }>({ foo: '' })
 	.case(fooActionCreator, (state, action) => ({ ...state, foo: action.payload }));
@@ -28,7 +28,7 @@ const fooReducerCreator = createReducerCreator<{ foo: string }>({ foo: '' })
 ### Store
 
 ```ts
-import { useReducerCreator } from '../src/react-flux-modules';
+import { useReducerCreator } from 'react-flux-modules';
 
 const { Provider, connect } = useReducerCreator(fooReducerCreator);
 ```
