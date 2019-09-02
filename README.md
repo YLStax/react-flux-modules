@@ -57,8 +57,8 @@ const TestContainer = connect<ITestProps>(store => ({
 }))(Test)
 
 ReactDOM.render((
-	< Provider >
+	<Provider>
 		<TestContainer />
-	</Provider >
+	</Provider>
 ), document.getElementById('test'));
 ```
