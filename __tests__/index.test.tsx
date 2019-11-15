@@ -5,7 +5,7 @@ import {
   createReducerCreator,
   createReducer,
   useReducerCreator
-} from "../src/@kanichi/react-flux-modules";
+} from "../src/@ylstax/react-flux-modules";
 
 const setIdActionCreator = createActionCreator<number>()("@TESTS/SETID");
 const setTextActionCreator = createActionCreator<{ text: string }>()(
