@@ -17,10 +17,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: yarn install, build, and test
+    - name: yarn install, build, test, and puplish
       run: |
         yarn
         yarn build
         yarn test
+        yarn login --registry=https://npm.pkg.github.com/
+        yarn publish
       env:
         CI: true
